@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fixing a Wrap-Around Bug in C++ | Beginner Coding Tutorials</title>
+</head>
+<body>
+
+<header>
+  <h1>Fixing a Wrap-Around Bug in C++</h1>
+  <p>By <strong>ANGAD SINGH</strong> | Roll No: <strong>LCS2026030</strong> | Branch: <strong>CS</strong></p>
+  <nav>
+    <a href="#problem">The problem</a> |
+    <a href="#debugging">Debugging</a> |
+    <a href="#fix">The fix</a> |
+    <a href="#conclusion">Conclusion</a>
+  </nav>
+  <hr>
+</header>
+
+<main>
+
+  <section id="intro">
+    <h2>Introduction</h2>
+    <p>
+      This week I solved a Codeforces-style problem called <em>Traffic Light</em> and got a wrong
+      answer on a test I was sure I understood. The bug turned out to be one of the most common
+      beginner mistakes: forgetting that a repeating sequence <strong>wraps around</strong>.
+      In this post I walk through the problem, how I found the bug, and the fix, so you can
+      avoid the same trap.
+    </p>
+  </section>
+
+  <section id="problem">
+    <h2>The problem</h2>
+    <p>
+      A traffic light repeats a string of colors such as <code>rrrgyyygy</code>, one letter per
+      second. You can cross only on green (<code>g</code>). You know the current color, but not
+      the exact second, so you need the longest wait that could happen from that color.
+    </p>
+    <figure>
+      <img src="images/image1.png" alt="Diagram of the string rrrgyyygy with an arrow from the last y wrapping around to the first r" width="500">
+      <figcaption>Figure 1: The string repeats, so the last <code>y</code> must walk past the start to reach a <code>g</code>.</figcaption>
+    </figure>
+  </section>
+
+  <section id="debugging">
+    <h2>Debugging the wrong answer</h2>
+
+    <h3>What I expected</h3>
+    <p>
+      For the input <code>9 y</code> with <code>rrrgyyygy</code>, I expected <strong>3</strong>,
+      because the three <code>y</code>s in the middle wait 3, 2 and 1 seconds. My program
+      printed 3, but the correct answer is 4.
+    </p>
+
+    <h3>What I missed</h3>
+    <p>
+      There is another <code>y</code> at the very end. From there the light goes to the start
+      of the string and walks through three reds before it reaches the green. That is a wait of
+      4 seconds. Since you do not know which <code>y</code> you are standing on, you must plan
+      for the worst one.
+    </p>
+    <figure>
+      <img src="images/image2.png" alt="Terminal screenshot showing expected output 4 and the program output 3" width="500">
+      <figcaption>Figure 2: The mismatch that sent me looking for the wrap-around case.</figcaption>
+    </figure>
+
+    <p>Here is how I tracked it down:</p>
+    <ol>
+      <li>Write out every index of the string and mark each position that matches the current color.</li>
+      <li>For each marked position, count the seconds until the next <code>g</code>.</li>
+      <li>Check the last position separately, and see whether its wait crosses the end of the string.</li>
+      <li>Take the maximum of all the waits, not the minimum.</li>
+    </ol>
+
+    <table border="1" cellpadding="6" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Start index</th>
+          <th>Next g at</th>
+          <th>Wait (seconds)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>4</td><td>7</td><td>3</td></tr>
+        <tr><td>5</td><td>7</td><td>2</td></tr>
+        <tr><td>6</td><td>7</td><td>1</td></tr>
+        <tr><td>8</td><td>3 (after wrapping)</td><td>4</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="fix">
+    <h2>The fix</h2>
+    <p>
+      The simplest trick is to double the string, so <code>s</code> becomes <code>s + s</code>.
+      Then a wait that crosses the end simply continues into the second copy. Scan from right
+      to left, remember the nearest <code>g</code>, and update the answer at each matching color.
+    </p>
+<pre><code>s += s;
+int ans = 0, nextG = -1;
+for (int i = 2 * n - 1; i &gt;= 0; i--) {
+    if (s[i] == 'g') nextG = i;
+    else if (i &lt; n &amp;&amp; s[i] == c) ans = max(ans, nextG - i);
+}
+cout &lt;&lt; ans &lt;&lt; "\n";</code></pre>
+
+    <p>A few things I learned from this bug:</p>
+    <ul>
+      <li>Circular or repeating sequences almost always need a wrap-around check.</li>
+      <li>When you are unsure of your position, the answer is the worst case over all positions.</li>
+      <li>Test the first and last elements by hand before you submit.</li>
+      <li>A single linear pass is enough here, with no advanced algorithms needed.</li>
+    </ul>
+
+    <p>
+      If you want to practise more problems like this, try the
+      <a href="https://codeforces.com/problemset" target="_blank" rel="noopener">Codeforces problemset</a>
+      and filter by the easiest ratings. For C++ details such as range-based loops, the
+      <a href="https://en.cppreference.com/w/cpp/language/range-for" target="_blank" rel="noopener">cppreference page on range-for</a>
+      is a reliable reference. You can also jump back to <a href="#problem">the problem statement</a> at any time.
+    </p>
+  </section>
+
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+      The bug was not about syntax. My logic was correct for most of the string, but I forgot that
+      the light never stops, and the end of the string connects back to the start. Writing the
+      cases out in a table made the missing one obvious. Next time I meet a repeating pattern,
+      the first thing I will ask is, "what happens at the edge?" That one question will save me
+      many wrong answers.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <hr>
+  <p>Beginner Coding Tutorials | Written by Your Name, Roll No 00000, Branch: Your Branch</p>
+</footer>
+
+</body>
+</html>
