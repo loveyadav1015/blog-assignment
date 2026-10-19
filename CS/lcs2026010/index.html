@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Evolution of Database Systems</title>
+</head>
+<body>
+
+    <header>
+        <h1>The Evolution of Database Systems: From Flat Files to Relational Models</h1>
+        <p><strong>Author:</strong> Khapandi Mit Dipak</p>
+        <p><strong>Roll Number:</strong> LCS2026010</p>
+        <p><strong>Branch:</strong> Computer Science (CS)</p>
+        <p>
+            Quick Navigation: 
+            <a href="#relational-era">Jump to The Relational Era</a> | 
+            <a href="#summary-table">View Comparison Table</a>
+        </p>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction to Data Management</h2>
+            <p>
+                In the earliest days of computing, storing and retrieving information was an arduous, mechanical process. Long before structured query languages and sophisticated database engines existed, early software applications relied entirely on flat files stored sequentially on magnetic tapes or basic punch cards. This meant that every single application had to implement its own logic to read, parse, search, and write records directly to the file system.
+            </p>
+            <p>
+                As computer applications grew more complex and organizational needs expanded, the glaring limitations of flat-file systems became apparent. Data redundancy was everywhere, leading to severe synchronization inconsistencies. If an employee changed their address, multiple disparate files had to be manually located and updated. If any hardware interruption occurred in the middle of a write operation, entire files risked total corruption with virtually no recovery mechanism.
+            </p>
+            <figure>
+                <img src="images/cover.jpg" alt="Vintage computer magnetic tape storage drive">
+            </figure>
+        </section>
+
+        <section id="hierarchical-network">
+            <h2>The Early Models: Hierarchical and Network</h2>
+            <p>
+                To resolve the inefficiencies inherent in unstructured text files, researchers during the late 1960s conceived tree-like and graph-based data arrangements. These were formalized primarily into two architectures:
+            </p>
+            <ul>
+                <li>Hierarchical Model: Structures records in an inverted tree where each child record possesses exactly one parent entity.</li>
+                <li>Network Model: Expands the tree model into an arbitrary directed graph, permitting many-to-many relationships across records.</li>
+            </ul>
+            <p>
+                While these systems brought significant performance enhancements for structured queries, they introduced rigid access pathways. Developers were forced to navigate records sequentially through hardcoded physical pointers. If the underlying data schema had to change, developers frequently had to rewrite entire chunks of application software from scratch.
+            </p>
+        </section>
+
+        <section id="relational-era">
+            <h2>The Relational Revolution</h2>
+            <p>
+                A monumental breakthrough occurred in 1970 when British computer scientist Edgar F. Codd authored his famous research paper outlining the relational model. Codd proposed abstracting data away from physical hardware constraints, representing information mathematically as relations (tables composed of rows and columns).
+            </p>
+            <p>
+                Under the relational paradigm, data integrity is guarded rigorously by structural constraints such as primary keys, foreign keys, and unique indexes. Application programmers no longer needed to worry about exact disk addresses; instead, a declarative query engine evaluated the requested information and constructed an optimal execution strategy under the hood. You can read more about Edgar Codd's foundational work on the <a href="https://en.wikipedia.org/wiki/Edgar_F._Codd" target="_blank">Wikipedia Biography of Edgar F. Codd</a>.
+            </p>
+            <figure>
+                <img src="images/history.jpg" alt="Relational database tables diagram showing primary and foreign key links">
+            </figure>
+            <p>
+                The sequential steps that transform an abstract business rule into a normalized relational model generally follow this pipeline:
+            </p>
+            <ol>
+                <li>Entity identification and attribute mapping.</li>
+                <li>Definition of primary and foreign key relationships.</li>
+                <li>Normalization passes to eliminate anomalies and redundancy.</li>
+                <li>Creation of indexes to accelerate critical query lookup times.</li>
+            </ol>
+        </section>
+
+        <section id="summary-table">
+            <h2>Architecture Comparison</h2>
+            <p>
+                The table below illustrates the primary trade-offs across the historical architectures discussed:
+            </p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Storage Paradigm</th>
+                        <th>Primary Benefit</th>
+                        <th>Main Limitation</th>
+                        <th>Primary Use Era</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Flat Files</td>
+                        <td>Very simple to create</td>
+                        <td>High redundancy and zero data integrity</td>
+                        <td>1950s - 1960s</td>
+                    </tr>
+                    <tr>
+                        <td>Hierarchical</td>
+                        <td>Fast one-to-many lookups</td>
+                        <td>Strict tree structure; no multiple parents</td>
+                        <td>Late 1960s</td>
+                    </tr>
+                    <tr>
+                        <td>Network</td>
+                        <td>Supports many-to-many links</td>
+                        <td>Excessive pointer maintenance overhead</td>
+                        <td>1970s</td>
+                    </tr>
+                    <tr>
+                        <td>Relational (RDBMS)</td>
+                        <td>Declarative SQL, schema flexibility, ACID</td>
+                        <td>Requires complex engine tuning at scale</td>
+                        <td>1980s - Present</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>
+                The continuous evolution of data storage systems demonstrates computer science's persistent drive toward abstraction and reliability. By transitioning from fragile physical flat files to mathematical relational models, software engineers gained powerful mechanisms to ensure transactional integrity and consistency. While newer NoSQL and distributed database systems continue to evolve for modern big-data workloads, the foundational principles established by the relational model remain the bedrock of modern data infrastructure worldwide.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Khapandi Mit Dipak. Submitted for Web Application Development Assignment.</p>
+        <p>Return to <a href="#introduction">top of page</a>.</p>
+    </footer>
+
+</body>
+</html>
