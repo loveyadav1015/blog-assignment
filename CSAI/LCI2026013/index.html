@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the Internet Works | Lokesh Bhangale</title>
+</head>
+<body>
+    <!-- Blog header and navigation -->
+    <header>
+        <h1>How the Internet Works</h1>
+        <p><strong>By:</strong> Lokesh Bhangale</p>
+        <p><strong>Roll Number:</strong> LCI2026013</p>
+        <p><strong>Branch:</strong> CSAI</p>
+        <p><time datetime="2026-10-19">19 October 2026</time></p>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#journey">A Message's Journey</a></li>
+                <li><a href="#dns">The Role of DNS</a></li>
+                <li><a href="#safety">Staying Safe</a></li>
+                <li><a href="#sources">Sources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section id="introduction">
+                <h2>Introduction: A Network of Networks</h2>
+                <p>The internet can feel like an invisible cloud that instantly delivers videos, messages, games, and websites. In reality, it is a worldwide network of connected computers, phones, servers, routers, and cables. These devices follow shared rules so that information can travel between them, even when they are made by different companies and located in different countries.</p>
+                <h3>Internet vs. the World Wide Web</h3>
+                <p>The World Wide Web is one service that uses the internet. When we open a website, we use the web; when we send email or make some kinds of internet calls, we use other services carried by the same underlying network.</p>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+                         alt="Earth at night illustrating the global connections that make worldwide communication possible"
+                         width="800">
+                    <figcaption>The internet connects people and systems across the world.</figcaption>
+                </figure>
+            </section>
+
+            <section id="journey">
+                <h2>What Happens When You Open a Website?</h2>
+                <p>Imagine typing a website address into your browser. First, your device connects through a local network, often using Wi-Fi to reach a router. The router forwards traffic toward your internet service provider (ISP), which connects to other networks. Routers along the way use addressing information to move packets closer to their destination.</p>
+                <h3>Packets and Routers</h3>
+                <p>Information is commonly divided into small units called <strong>packets</strong>. Each packet carries data and information that helps networks deliver it. Packets may travel through several different links before reaching the server. The receiving device puts the data back together, while communication protocols help devices understand how to exchange it reliably.</p>
+                <ol>
+                    <li>You enter a website address in the browser.</li>
+                    <li>Your device finds the server's network address and sends a request.</li>
+                    <li>Routers forward packets across connected networks.</li>
+                    <li>The server responds with the resources needed for the page.</li>
+                    <li>Your browser interprets the response and displays the website.</li>
+                </ol>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+                         alt="Close-up of electronic circuit components representing the hardware used in computing and networking"
+                         width="800">
+                    <figcaption>Computers and networking equipment process and forward digital information.</figcaption>
+                </figure>
+            </section>
+
+            <section id="dns">
+                <h2>Why Domain Names Matter</h2>
+                <p>People prefer memorable names such as example.com instead of numeric IP addresses. The Domain Name System (DNS) helps translate domain names into the information computers need to locate services. You can think of DNS as a distributed directory: your device asks a resolver, which can look up the relevant records and return an answer.</p>
+                <h3>Communication and HTTPS</h3>
+                <p>After the server is located, a browser and server use web protocols to communicate. HTTPS protects the connection with encryption and helps the browser verify the identity of the website it is talking to. Encryption is especially important when information should remain private, such as when signing in or making a payment.</p>
+                <table>
+                    <caption>Some important parts of a web request</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Part</th>
+                            <th scope="col">Main job</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DNS</td>
+                            <td>Helps find the network address associated with a domain name.</td>
+                        </tr>
+                        <tr>
+                            <td>Router</td>
+                            <td>Forwards packets toward their destinations.</td>
+                        </tr>
+                        <tr>
+                            <td>Server</td>
+                            <td>Receives requests and sends back data or web resources.</td>
+                        </tr>
+                        <tr>
+                            <td>Browser</td>
+                            <td>Requests resources and renders the page for the user.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="safety">
+                <h2>Using the Internet Responsibly</h2>
+                <h3>Simple Safety Habits</h3>
+                <p>The internet is useful, but it is important to use it thoughtfully. Check that a website address is spelled correctly, be cautious with unexpected links, use unique passwords, and enable multi-factor authentication when available. Look for HTTPS, while remembering that encryption alone does not prove that a website or its claims are trustworthy.</p>
+                <p>Internet performance also depends on many factors: the strength of a Wi-Fi connection, network congestion, the distance to a server, and how quickly the server responds. A slow page does not necessarily mean that the whole internet is slow; the problem may be limited to one connection or service.</p>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusion</h2>
+                <p>The internet works because many independent networks cooperate using shared protocols. Domain names help people find services, routers move packets, servers answer requests, and browsers turn returned data into pages we can read and use. Understanding these basics makes the web feel less mysterious and helps us become more informed and safer internet users.</p>
+            </section>
+
+            <section id="sources">
+                <h2>Sources and Further Reading</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL">MDN: What is a URL?</a> — an introduction to the parts of a web address.</li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">MDN: An overview of HTTP</a> — how browsers and servers exchange web resources.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <aside>
+        <h2>About the Author</h2>
+        <p>Lokesh Bhangale is learning how the web works, from the networks that carry information to the browser that presents it.</p>
+    </aside>
+
+    <footer>
+        <p>Blog assignment by Lokesh Bhangale.</p>
+        <p><a href="#introduction">Back to the top</a></p>
+    </footer>
+</body>
+</html>
