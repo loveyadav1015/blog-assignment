@@ -15,8 +15,37 @@
             padding:0px;
             background-color:rgb(253, 244, 231);
         }
+        div{
+            margin:22px;
+            width:1300px;
+            height:auto;
+            margin-bottom:75px;
+        }
+        img{
+            border:2px solid black;
+            border-top-left-radius:25%;
+            border-top-right-radius:25%;
+            width:190px;
+            height:360px;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+        aside{
+            display:flex;
+            flex-direction: column;
+        }
+        .caption{
+            padding:5px;
+            width:190px;
+            text-align: center;
+            background-color: rgb(252, 252, 252);
+            border-bottom-left-radius: 25%;
+            border-bottom-right-radius: 25%;
+            border:2px solid black;
+        }
         nav{
             position:sticky;
+            top:0px;
             background-color: rgb(56, 56, 56);
             width:100%;
             display:flex;
@@ -31,14 +60,19 @@
             text-decoration:none;
             margin:5px;
         }
+        nav a:hover{
+            background-color: rgb(102, 102, 102);
+        }
         header{
             font-size: 50px;
             text-align:center;
         }
+        header p{
+            font-size: 30px;
+        }
         .Introduction{
-            width:100%;
             background-color: aliceblue;
-            margin:5px;
+            
             padding:20px;
             border:2px solid black;
             border-radius:5%;
@@ -46,18 +80,11 @@
             gap:20px;
             align-items: center;
         }
-        .Introduction img{
-            width:190px;
-            height:360px;
-            margin-top:auto;
-            margin-bottom:auto;
-            border:2px solid black;
-            border-radius:25%;
-        }
+
         .evolution{
-            width:100%;
+
             background-color: aliceblue;
-            margin:5px;
+            
             padding:20px;
             border:2px solid black;
             border-radius:5%;
@@ -65,18 +92,11 @@
             gap:20px;
             align-items: center;
         }
-        .evolution img{
-            width:190px;
-            height:360px;
-            margin-top:auto;
-            margin-bottom:auto;
-            border:2px solid black;
-            border-radius:25%;
-        }
+
         .comparision{
-            width:100%;
+
             background-color: aliceblue;
-            margin:5px;
+            
             padding:20px;
             border:2px solid black;
             border-radius:5%;
@@ -84,14 +104,7 @@
             gap:20px;
             align-items: center;
         }
-        .comparision img{
-            width:auto;
-            height:400px;
-            margin-top:auto;
-            margin-bottom:auto;
-            border:2px solid black;
-            border-radius:25%;
-        }
+
         .comparision section{
             text-align:center;
             padding:5px;
@@ -114,9 +127,9 @@
             background-color: rgb(181, 181, 254);
         }
         .ranking{
-            width:100%;
+
             background-color: aliceblue;
-            margin:5px;
+            
             padding:20px;
             border:2px solid black;
             border-radius:5%;
@@ -127,18 +140,11 @@
         .ranking section{
             text-align: center;
         }
-        .ranking img{
-            width:auto;
-            height:400px;
-            margin-top:auto;
-            margin-bottom:auto;
-            border:2px solid black;
-            border-radius:25%;
-        }
+
         .conclusion{
-            width:100%;
+
             background-color: aliceblue;
-            margin:5px;
+            
             padding:20px;
             border:2px solid black;
             border-radius:5%;
@@ -146,14 +152,7 @@
             gap:20px;
             align-items: center;
         }
-        .conclusion img{
-            width:400px;
-            height:400px;
-            margin-top:auto;
-            margin-bottom:auto;
-            border:2px solid black;
-            border-radius:50%;
-        }
+
     </style>
 </head>
 <body>
@@ -162,6 +161,7 @@
     </nav>
     <header>
         <h1>RISE OF MANGA AND ANIME</h1>
+        <p>Name-Tejas Kumar | Branch-CSAI | Roll No.-LCI2026011</p>
     </header>
     <div class="Introduction" id="intro">
         <section>
@@ -178,10 +178,14 @@
                 <li><strong>Fan Communities & Conventions:</strong> International cosplay events, fan conventions, and online forums that sustain active global fandoms.</li>
             </ul>
         </section>
-        <img src="images/mha.jpeg" alt="My Hero Academia Manga Vol. 1 Cover" >
+        <aside><img src="images/mha.jpeg" alt="My Hero Academia Manga Vol. 1 Cover" >
+        <figcaption class="caption">My Hero Acdemia by Kohei Horikoshi</figcaption></aside>
     </div>
     <div class="evolution" id="evo">
-        <img src="images/ash.jpeg" alt="Ash from Pokemon anime">
+        <aside>
+            <img src="images/ash.jpeg" alt="Ash from Pokemon anime">
+            <figcaption class="caption">Ash Ketchum from Pokemon anime</figcaption>
+        </aside>
         <section>
             <h2>Evolution of the Global Expansion</h2>
             <h3>From Niche Broadcasts to Worldwide Streaming</h3>
@@ -196,16 +200,19 @@
     
     </div>
     <div class="comparision" id="comp">
-        <img src="images/jjk.jpeg" alt="JJK First Volume Cover">
+        <aside>
+            <img src="images/jjk.jpeg" alt="JJK First Volume Cover">
+            <figcaption class="caption">Jujutsu Kaisen by Gege Akutami</figcaption>
+        </aside>
         <section><h2>MANGA V/S WESTERN COMICS</h2>
         <table>
-            <theader>
+            <thead>
                 <tr>
                     <th>Feature</th>
                     <th>Manga</th>
                     <th>Western Comics</th>
                 </tr>
-            </theader>
+            </thead>
             <tbody>
                 <tr>
                     <td>Color Format</td>
@@ -234,22 +241,51 @@
                 </tr>
             </tbody>
         </table></section>
-        <img src="images/spidey.jpeg" alt="Spiderman First Issue">
+        <aside>
+            <img src="images/spidey.jpeg" alt="Spiderman First Issue">
+            <figcaption class="caption">Spiderman First Issue</figcaption>
+        </aside>
     </div>
     <div class="ranking" id="rank">
         <section>
             <h2>MOST SOLD COMICS OF ALL TIME</h2>
             <p>Reference: <a href="https://en.wikipedia.org/wiki/List_of_best-selling_comic_series">Wikipedia</a></p>
         </section>
-        <img src="images/onepiece.jpeg" alt="One Piece Manga">
-        <img src="images/superman.jpg" alt="Superman Comic"><img src="images/Batman.jpeg" alt="Batman Comic"><img src="images/spider.jpeg" alt="Spiderman Comic">
+        <aside>
+            <img src="images/onepiece.jpeg" alt="One Piece Manga">
+            <figcaption class="caption">
+                <p><strong>One Piece</strong></p>
+                <p><strong>Sales:600 Million</strong></p>
+            </figcaption>
+        </aside>
+        <aside>
+            <img src="images/superman.jpg" alt="Superman Comic">
+            <figcaption class="caption">
+                <p><strong>Superman</strong></p>
+                <p><strong>Sales:600 Million</strong></p>
+            </figcaption>
+        </aside>
+        <aside>
+            <img src="images/Batman.jpeg" alt="Batman Comic">
+            <figcaption class="caption">
+                <p><strong>Batman</strong></p>
+                <p><strong>Sales:484 Million</strong></p>
+            </figcaption>
+        </aside>
+        <aside>
+            <img src="images/spider.jpeg" alt="Spiderman Comic">
+            <figcaption class="caption">
+                <p><strong>Spiderman</strong></p>
+                <p><strong>Sales:387 Million</strong></p>
+            </figcaption>
+        </aside>
     </div>
     <div class="conclusion" id="conc">
         <section>
         <h2>Conclusion</h2>
         <p>The global expansion of anime and manga demonstrates how powerful, universal storytelling can transcend geographical and cultural barriers. While Western comics continue to thrive through cinematic universes, manga's unique creator-driven format, black-and-white artistic style, and diverse genres have allowed it to capture a massive share of the international reading audience. As streaming technology and global artistic collaborations continue to advance, the influence of Japanese pop culture alongside Western graphic storytelling will only continue to grow.</p>
         </section>
-        <img src="images/jolly.png" alt="Strawhat Jolly roger">
+        <img style="border-radius:50%" src="images/jolly.png" alt="Strawhat Jolly roger" id="jolly">
     </div>
 </body>
 </html>
