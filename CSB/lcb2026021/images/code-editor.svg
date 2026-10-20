@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+<rect width="600" height="300" fill="#1e1e2e"/>
+<circle cx="25" cy="22" r="7" fill="#ff5f57"/><circle cx="48" cy="22" r="7" fill="#febc2e"/><circle cx="71" cy="22" r="7" fill="#28c840"/>
+<g font-family="Courier New, monospace" font-size="20" fill="#cdd6f4">
+<text x="30" y="80">&lt;h1&gt;Hello, World!&lt;/h1&gt;</text>
+<text x="30" y="115">&lt;p&gt;My first web page.&lt;/p&gt;</text>
+<text x="30" y="150">&lt;a href="#intro"&gt;Home&lt;/a&gt;</text>
+<text x="30" y="185">&lt;img src="images/pic.png"</text>
+<text x="30" y="220">     alt="A picture"&gt;</text>
+</g>
+</svg>
