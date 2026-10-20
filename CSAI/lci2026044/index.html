@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- SAMPLE ONLY: use this as a reference, then write your own blog in your own words. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- The title shows on the browser tab -->
+  <title>My First Steps in C++: Learning to Think Like a Programmer</title>
+</head>
+<body>
+
+  <!-- header: top part of the page (title + author details) -->
+  <header>
+    <h1>My First Steps in C++: Learning to Think Like a Programmer</h1>
+    <p>By Rajkumar Yuvraj Gaikwad | Roll No: LCI2026044 | Branch: CSAI, IIIT Lucknow</p>
+    <!-- Anchor link: jumps to the element with id="conclusion" on this same page -->
+    <p><a href="#conclusion">Jump to the conclusion</a></p>
+  </header>
+
+  <!-- main: the central content of the page -->
+  <main>
+
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        I am a first-year student of the CSAI branch at IIIT Lucknow. Before college,
+        I thought programming was only about typing code. In my first weeks I learned
+        that it is really about thinking. This blog is about my early journey with C++,
+        how I try to solve problems, and what I plan to learn next.
+      </p>
+      <!-- Image 1: always write useful alt text. Add your own picture to the images folder -->
+      <img src="images/cover.jpg" alt="My laptop showing a C++ program in VS Code" width="400">
+    </section>
+
+    <section id="approach">
+      <h2>How I Approach a New Problem</h2>
+      <p>
+        Whenever I see a new problem, my first instinct is to write the solution like a
+        recipe: a list of ordered steps in plain English. Only after that do I turn each
+        step into C++ code. My steps usually look like this:
+      </p>
+      <!-- Ordered list: steps where the order matters -->
+      <ol>
+        <li>Read the problem twice and note the input and the output.</li>
+        <li>Write the solution steps in plain English.</li>
+        <li>Try the steps by hand on a small example.</li>
+        <li>Convert each step into C++ code.</li>
+        <li>Test with different inputs, especially tricky ones.</li>
+      </ol>
+      <p>
+        This habit saves me from staring at a blank screen, because one small step is
+        always easier to code than a whole problem.
+      </p>
+    </section>
+
+    <section id="champion">
+      <h2>The Champion Idea</h2>
+      <h3>Finding the largest of three numbers</h3>
+      <p>
+        One problem that taught me a lot was finding the largest of three numbers. At
+        first I compared every pair of numbers, and the code became messy. Then I learned
+        the champion idea: keep one variable called largest, assume the first number is
+        the champion, and let every other number challenge it. If a challenger is bigger,
+        it becomes the new champion.
+      </p>
+      <!-- pre + code keeps the spacing of code. Note: < and > must be written as &lt; and &gt; -->
+      <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+
+    int largest = a;
+    if (b &gt; largest) {
+        largest = b;
+    }
+    if (c &gt; largest) {
+        largest = c;
+    }
+
+    cout &lt;&lt; largest;
+    return 0;
+}
+      </code></pre>
+      <p>
+        What I like about this idea is that it works for three numbers or three hundred.
+        The logic stays the same and only the count changes.
+      </p>
+      <!-- Image 2 -->
+      <img src="images/notes.jpg" alt="My notebook with the champion idea written as steps" width="400">
+    </section>
+
+    <section id="learning">
+      <h2>What I Have Learned So Far</h2>
+      <!-- Unordered list: items where the order does not matter -->
+      <ul>
+        <li>Variables and data types</li>
+        <li>Input and output using cin and cout</li>
+        <li>Decision making with if-else</li>
+        <li>Repeating work with loops</li>
+      </ul>
+      <p>Here is where I stand with each topic:</p>
+      <!-- Table: thead holds the column names, tbody holds the data rows -->
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Topic</th>
+            <th>What it is used for</th>
+            <th>My progress</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Variables</td>
+            <td>Storing values</td>
+            <td>Comfortable</td>
+          </tr>
+          <tr>
+            <td>if-else</td>
+            <td>Making decisions</td>
+            <td>Comfortable</td>
+          </tr>
+          <tr>
+            <td>Loops</td>
+            <td>Repeating work</td>
+            <td>Practising</td>
+          </tr>
+          <tr>
+            <td>Functions</td>
+            <td>Reusing code</td>
+            <td>Just starting</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="mistakes">
+      <h2>Mistakes That Taught Me Something</h2>
+      <p>
+        I often forgot semicolons at the end of lines, and once I wrote a single equals
+        sign inside an if condition instead of a double one. The program ran, but the
+        answer was wrong. Now I read my conditions slowly, and I use the
+        <a href="https://en.cppreference.com/">C++ reference website</a> whenever I am unsure.
+      </p>
+    </section>
+
+    <section id="next-steps">
+      <h2>What Comes Next</h2>
+      <p>
+        I practise problems on <a href="https://www.codechef.com/">CodeChef</a> regularly,
+        and I want to learn functions, arrays, and the STL next. I also hope to join the
+        competitive programming wing of my college. My long-term goal is to become a strong
+        full-stack software engineer.
+      </p>
+    </section>
+
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>
+        In these first weeks I learned that programming is about breaking a big problem
+        into small steps and trusting the process. Ideas like the champion variable show
+        that one clear piece of logic can solve many problems. I still make mistakes, but
+        each one teaches me something. I am excited to keep learning and sharing my
+        progress.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- footer: bottom part of the page -->
+  <footer>
+    <p>Written by Rajkumar Yuvraj Gaikwad | Roll No: LCI2026044 | Branch: CSAI</p>
+  </footer>
+
+</body>
+</html>
