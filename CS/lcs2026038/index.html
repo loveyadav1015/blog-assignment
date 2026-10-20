@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aerodynamics and Ground Effect in Modern Formula 1</title>
+</head>
+<body>
+
+    <header>
+        <h1>Aerodynamics and Ground Effect in Modern Formula 1</h1>
+        <p><strong>Name:</strong> MUTHAMIZH SHEKAR | <strong>Roll No:</strong> LCS2026038 | <strong>Branch:</strong> CS</p>
+        <nav>
+            <p><strong>Contents:</strong></p>
+            <ul>
+                <li><a href="#introduction">1. Introduction to Modern F1 Aerodynamics</a></li>
+                <li><a href="#ground-effect">2. Ground Effect and Venturi Tunnels</a></li>
+                <li><a href="#comparison-data">3. Aerodynamic Downforce Comparison</a></li>
+                <li><a href="#conclusion">4. Conclusion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>1. Introduction to Modern F1 Aerodynamics</h2>
+            <p>
+                In all single-seater motorsport,particularly FORMULA 1, lap time is governed by the tyre's capability to generate lateral grip. 
+                Mechanical grip, gained only from chassis kinematics and friction, reaches its threshold at high speeds. 
+                To exceed this limit, cars manipulate airflow to produce negative lift, commonly termed as downforce. 
+                Downforce increases the normal load pushing the tyres into the track asphalt without adding inertial mass, allowing 
+                extraordinary cornering velocities.
+            </p>
+            <p>
+                For more look onto the motorsport regulations, refer to the official 
+                <a href="https://www.fia.com" target="_blank">Federation Internationale de l'Automobile (FIA)</a> website.
+            </p>
+
+            <figure>
+                <img src="telemetry.png" alt="Formula 1 qualifying telemetry trace comparing cornering speeds and braking zones" width="600">                <figcaption>Figure 1: Cornering load and speed trace under heavy downforce regimes.</figcaption>
+            </figure>
+        </section>
+
+        <section id="ground-effect">
+            <h2>2. Ground Effect and Venturi Tunnels</h2>
+            <p>
+                The 2022 technical overhaul shifted the primary downforce generation mechanism from the front and rear wings to under-floor 
+                Venturi tunnels. Ground effect exploits Bernoulli's principle: as air enters a converging duct beneath the chassis, 
+                its velocity increases, causing a localized drop in static pressure. This substantial pressure delta between the top 
+                and bottom surfaces of the floor creates immense suction.
+            </p>
+
+            <h3>Key Aerodynamic Objectives</h3>
+            <p>Engineers design modern floor profiles around three key objectives:</p>
+            <ol>
+                <li>Maximize underfloor air mass flow while maintaining laminar boundary layers.</li>
+                <li>Seal the floor edges using vortex generation to prevent high-pressure ambient air ingress.</li>
+                <li>Mitigate aerodynamic stalling and vertical resonance phenomena, commonly termed porpoising.</li>
+            </ol>
+
+            <figure>
+                <img src="aero.jpeg" alt="Schematic representation of Venturi tunnel pressure gradients" width="600">
+                <figcaption>Figure 2: Venturi throat geometry accelerating underbody airflow.</figcaption>
+            </figure>
+        </section>
+
+        <section id="comparison-data">
+            <h2>3. Aerodynamic Downforce Comparison</h2>
+            <p>
+                The trade-off between downforce and induced drag is quantified via the lift-to-drag ratio (L/D). 
+                The table below outlines baseline performance characteristics across different operational aero setups.
+            </p>
+
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Circuit Type</th>
+                        <th>Downforce Level</th>
+                        <th>Drag Coefficient (Approx)</th>
+                        <th>Primary Objective</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monza (Low Downforce)</td>
+                        <td>Low</td>
+                        <td>0.70</td>
+                        <td>Top speed along high-speed straights</td>
+                    </tr>
+                    <tr>
+                        <td>Silverstone (Balanced)</td>
+                        <td>Medium-High</td>
+                        <td>0.95</td>
+                        <td>High-speed directional stability</td>
+                    </tr>
+                    <tr>
+                        <td>Monaco (High Downforce)</td>
+                        <td>Maximum</td>
+                        <td>1.25</td>
+                        <td>Peak mechanical and low-speed grip</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                For further reference on fluid dynamics fundamentals, check 
+                <a href="https://en.wikipedia.org/wiki/Bernoulli%27s_principle" target="_blank">Bernoulli's Principle Reference Document</a>.
+            </p>
+        </section>
+
+        <section id="conclusion">
+            <h2>4. Conclusion</h2>
+            <p>
+                Aerodynamic efficiency represents the pinnacle of contemporary racing engineering. 
+                By transitioning to floor-dominated ground effect architectures, modern design balances high-speed stability 
+                with clean trailing wakes, enabling closer racing. As simulation and computational fluid dynamics (CFD) 
+                continue to mature, the optimization of complex pressure gradients will remain the nature of competitive track engineering.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; MUTHAMIZH SHEKAR - LCS2026038 </p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
+
+</body>
+</html>
