@@ -4,6 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Assignment</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        }
+        body{
+            margin:0px;
+            padding:0px;
+            background-color:rgb(253, 244, 231);
+        }
+        nav{
+            position:sticky;
+            background-color: rgb(56, 56, 56);
+            width:100%;
+            display:flex;
+            gap:100px;
+            justify-content:center;
+            
+        }
+        nav a{
+            color:aliceblue;
+            padding:10px;
+            background-color:rgb(56, 56, 56);
+            text-decoration:none;
+            margin:5px;
+        }
+        header{
+            font-size: 50px;
+            text-align:center;
+        }
+        .Introduction{
+            width:100%;
+            background-color: aliceblue;
+            margin:5px;
+            padding:20px;
+            border:2px solid black;
+            border-radius:5%;
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+        .Introduction img{
+            width:190px;
+            height:360px;
+            margin-top:auto;
+            margin-bottom:auto;
+            border:2px solid black;
+            border-radius:25%;
+        }
+        .evolution{
+            width:100%;
+            background-color: aliceblue;
+            margin:5px;
+            padding:20px;
+            border:2px solid black;
+            border-radius:5%;
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+        .evolution img{
+            width:190px;
+            height:360px;
+            margin-top:auto;
+            margin-bottom:auto;
+            border:2px solid black;
+            border-radius:25%;
+        }
+        .comparision{
+            width:100%;
+            background-color: aliceblue;
+            margin:5px;
+            padding:20px;
+            border:2px solid black;
+            border-radius:5%;
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+        .comparision img{
+            width:auto;
+            height:400px;
+            margin-top:auto;
+            margin-bottom:auto;
+            border:2px solid black;
+            border-radius:25%;
+        }
+        .comparision section{
+            text-align:center;
+            padding:5px;
+        }
+        .comparision section table{
+            border: 2px solid black;
+            border-spacing: 0px;
+            
+        }
+        .comparision section th,td{
+            border:2px solid black;
+            padding:5px;
+
+        }
+        .comparision section table th{
+            background-color: rgb(81, 81, 253);
+            color:white;
+        }
+        .comparision section table tbody tr td:first-child{
+            background-color: rgb(181, 181, 254);
+        }
+        .ranking{
+            width:100%;
+            background-color: aliceblue;
+            margin:5px;
+            padding:20px;
+            border:2px solid black;
+            border-radius:5%;
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+        .ranking section{
+            text-align: center;
+        }
+        .ranking img{
+            width:auto;
+            height:400px;
+            margin-top:auto;
+            margin-bottom:auto;
+            border:2px solid black;
+            border-radius:25%;
+        }
+        .conclusion{
+            width:100%;
+            background-color: aliceblue;
+            margin:5px;
+            padding:20px;
+            border:2px solid black;
+            border-radius:5%;
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+        .conclusion img{
+            width:400px;
+            height:400px;
+            margin-top:auto;
+            margin-bottom:auto;
+            border:2px solid black;
+            border-radius:50%;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -27,9 +178,10 @@
                 <li><strong>Fan Communities & Conventions:</strong> International cosplay events, fan conventions, and online forums that sustain active global fandoms.</li>
             </ul>
         </section>
-        <img src="images/mha.jpeg" alt="My Hero Academia Manga Vol. 1 Cover">
+        <img src="images/mha.jpeg" alt="My Hero Academia Manga Vol. 1 Cover" >
     </div>
     <div class="evolution" id="evo">
+        <img src="images/ash.jpeg" alt="Ash from Pokemon anime">
         <section>
             <h2>Evolution of the Global Expansion</h2>
             <h3>From Niche Broadcasts to Worldwide Streaming</h3>
@@ -41,16 +193,17 @@
                 <li><strong>The On-Demand Streaming Era (2010s–Present):</strong>Global streaming services made seasonal anime simulcasts available globally within hours of their Japanese TV broadcasts.</li>
             </ol>
         </section>
-        <img src="images/ash.jpeg" alt="Ash from Pokemon anime">
+    
     </div>
     <div class="comparision" id="comp">
-        <h2>MANGA V/S WESTERN COMICS</h2>
+        <img src="images/jjk.jpeg" alt="JJK First Volume Cover">
+        <section><h2>MANGA V/S WESTERN COMICS</h2>
         <table>
             <theader>
                 <tr>
-                    <td>Feature</td>
-                    <td>Manga</td>
-                    <td>Western Comics</td>
+                    <th>Feature</th>
+                    <th>Manga</th>
+                    <th>Western Comics</th>
                 </tr>
             </theader>
             <tbody>
@@ -80,13 +233,16 @@
                     <td>Dominantly Superheroes, Sci-Fi, and Fantasy</td>
                 </tr>
             </tbody>
-        </table>
-        <img src="images/jjk.jpeg" alt="JJK First Volume Cover">
+        </table></section>
         <img src="images/spidey.jpeg" alt="Spiderman First Issue">
     </div>
     <div class="ranking" id="rank">
-        <h2>MOST SOLD COMICS OF ALL TIME</h2>
-        <img src="images/onepiece.jpeg" alt="One Piece Manga"><img src="images/superman.jpg" alt="Superman Comic"><img src="images/Batman.jpeg" alt="Batman Comic"><img src="images/spider.jpeg" alt="Spiderman Comic">
+        <section>
+            <h2>MOST SOLD COMICS OF ALL TIME</h2>
+            <p>Reference: <a href="https://en.wikipedia.org/wiki/List_of_best-selling_comic_series">Wikipedia</a></p>
+        </section>
+        <img src="images/onepiece.jpeg" alt="One Piece Manga">
+        <img src="images/superman.jpg" alt="Superman Comic"><img src="images/Batman.jpeg" alt="Batman Comic"><img src="images/spider.jpeg" alt="Spiderman Comic">
     </div>
     <div class="conclusion" id="conc">
         <section>
