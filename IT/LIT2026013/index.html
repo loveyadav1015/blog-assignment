@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the Internet Works</title>
+</head>
+<body id="top">
+    <header>
+        <h1>How the Internet Works</h1>
+        <p>A beginner's guide to the network that connects the world</p>
+        <p><strong>Name:</strong> Tanmay Godha</p>
+        <p><strong>Roll number:</strong> LIT2026013</p>
+        <p><strong>Branch:</strong> IT</p>
+        <img src="images/internet-network.svg" alt="Illustration of computers and devices connected through a network">
+    </header>
+
+    <main>
+        <nav>
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#basics">What is the internet?</a></li>
+                <li><a href="#journey">How data travels</a></li>
+                <li><a href="#names">IP addresses and DNS</a></li>
+                <li><a href="#safety">Staying safe online</a></li>
+            </ul>
+        </nav>
+
+        <section id="basics">
+            <h2>1. What Is the Internet?</h2>
+            <p>The internet is a worldwide network that connects computers, phones, servers, and many other devices. It allows people to communicate, learn, share files, watch videos, and use online services. The internet is often called a <strong>network of networks</strong> because it links many smaller networks together using common technical rules known as protocols.</p>
+            <p>The internet is not one giant computer. It relies on physical and wireless connections, including fibre-optic cables, Wi-Fi, mobile networks, routers, data centres, and cables under the sea. At home, a device usually connects to a Wi-Fi router, which connects to an internet service provider. That provider helps carry data towards other networks and the destination.</p>
+            <img src="images/data-centre.svg" alt="Rows of server equipment in a data centre">
+        </section>
+
+        <section id="journey">
+            <h2>2. How Does Data Travel?</h2>
+            <p>Imagine entering a website address into a browser. Your browser prepares a request for the website's server. The request travels across networks, passing through devices called routers. Routers examine addressing information and forward data towards its destination. Information is commonly divided into small units called <em>packets</em>, which can travel through networks before being reassembled at the destination.</p>
+            <p>The server receives the request and sends back the resources needed to display the page, such as HTML documents and images. Your browser reads the HTML and displays the content. This exchange is often completed in less than a second, though the time depends on the network, server, and size of the page.</p>
+            <h3>A simple website visit</h3>
+            <ol>
+                <li>Enter a website address in your browser.</li>
+                <li>The browser looks up the website's network address.</li>
+                <li>Your device sends a request through the network.</li>
+                <li>The server returns the requested page resources.</li>
+                <li>The browser displays the webpage.</li>
+            </ol>
+            <p>The World Wide Web is one service that uses the internet. Email, online gaming, video calls, and file transfers also use internet connections, even though they are not all the same service.</p>
+        </section>
+
+        <section id="names">
+            <h2>3. IP Addresses and DNS</h2>
+            <p>Devices use Internet Protocol (IP) addresses to help identify where data should be delivered. IPv4 addresses are written as four numbers separated by dots. IPv6 addresses use groups of hexadecimal characters separated by colons and provide a much larger address space.</p>
+            <p>People find names easier to remember than numbers. The Domain Name System (DNS) helps translate a domain name, such as a website's name, into the IP address that computers can use to contact the server. A DNS resolver looks up the relevant record, and the browser can then send its request to the destination.</p>
+            <h3>Useful terms</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Term</th>
+                        <th scope="col">Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Router</td>
+                        <td>Forwards data between networks.</td>
+                    </tr>
+                    <tr>
+                        <td>Server</td>
+                        <td>Receives requests and provides resources or services.</td>
+                    </tr>
+                    <tr>
+                        <td>Packet</td>
+                        <td>A small unit of data sent across a network.</td>
+                    </tr>
+                    <tr>
+                        <td>DNS</td>
+                        <td>Looks up domain names to find network addresses.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>To explore these ideas further, visit the <a href="https://www.cloudflare.com/learning/network-layer/what-is-the-internet/">Cloudflare guide to the internet</a>. You can also read about the <a href="https://www.internetsociety.org/internet/">Internet Society's explanation of the internet</a>.</p>
+        </section>
+
+        <section id="safety">
+            <h2>4. Staying Safe Online</h2>
+            <p>The internet makes information and communication widely available, but using it safely is important. Create strong, unique passwords and turn on multi-factor authentication when possible. Check a website's address carefully before entering personal information. Be cautious about unexpected messages, links, and attachments, because some are designed to trick people.</p>
+            <ul>
+                <li>Use different passwords for important accounts.</li>
+                <li>Keep your browser and operating system updated.</li>
+                <li>Check information against reliable sources.</li>
+                <li>Think before sharing personal details or photos.</li>
+                <li>Use HTTPS websites when sending sensitive information, while remembering that HTTPS alone does not prove a site is honest.</li>
+            </ul>
+            <p>Learning how networks work can also help us understand why privacy, security updates, and responsible online behaviour matter. For a practical introduction to online safety, read <a href="https://staysafeonline.org/">Stay Safe Online</a>.</p>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>The internet connects networks around the world so devices can exchange information. Routers forward packets, IP addresses help data reach the right destination, DNS connects familiar domain names with network addresses, and servers respond to requests from browsers. These steps happen so quickly that opening a website can feel almost instant. Understanding the basics makes the technology less mysterious and helps us use it thoughtfully. As the internet continues to develop, knowing how it works—and how to stay safe while using it—is a useful skill for every student.</p>
+            <p><a href="#top">Return to the top of this article</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Written by Tanmay Godha | LIT2026013 | IT</p>
+        <p>This blog was written for the FOSS + Web HTML assignment.</p>
+    </footer>
+</body>
+</html>
