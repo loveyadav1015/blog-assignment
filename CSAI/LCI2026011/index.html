@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Assignment</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        }
+        body{
+            margin:0px;
+            padding:0px;
+            background-color:rgb(253, 244, 231);
+        }
+        div{
+            margin:22px;
+            width:1300px;
+            height:auto;
+            margin-bottom:75px;
+        }
+        img{
+            border:2px solid black;
+            border-top-left-radius:25%;
+            border-top-right-radius:25%;
+            width:190px;
+            height:360px;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+        aside{
+            display:flex;
+            flex-direction: column;
+        }
+        .caption{
+            padding:5px;
+            width:190px;
+            text-align: center;
+            background-color: rgb(252, 252, 252);
+            border-bottom-left-radius: 25%;
+            border-bottom-right-radius: 25%;
+            border:2px solid black;
+        }
+        nav{
+            position:sticky;
+            top:0px;
+            background-color: rgb(56, 56, 56);
+            width:100%;
+            display:flex;
+            gap:100px;
+            justify-content:center;
+            
+        }
+        nav a{
+            color:aliceblue;
+            padding:10px;
+            background-color:rgb(56, 56, 56);
+            text-decoration:none;
+            margin:5px;
+        }
+        nav a:hover{
+            background-color: rgb(102, 102, 102);
+        }
+        header{
+            font-size: 50px;
+            text-align:center;
+        }
+        header p{
+            font-size: 30px;
+        }
+        .Introduction{
+            background-color: aliceblue;
+            
+            padding:20px;
+            border:2px solid black;
+            border-radius:5%;
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+
+        .evolution{
+
+            background-color: aliceblue;
+            
+            padding:20px;
+            border:2px solid black;
+            border-radius:5%;
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+
+        .comparision{
+
+            background-color: aliceblue;
+            
+            padding:20px;
+            border:2px solid black;
+            border-radius:5%;
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+
+        .comparision section{
+            text-align:center;
+            padding:5px;
+        }
+        .comparision section table{
+            border: 2px solid black;
+            border-spacing: 0px;
+            
+        }
+        .comparision section th,td{
+            border:2px solid black;
+            padding:5px;
+
+        }
+        .comparision section table th{
+            background-color: rgb(81, 81, 253);
+            color:white;
+        }
+        .comparision section table tbody tr td:first-child{
+            background-color: rgb(181, 181, 254);
+        }
+        .ranking{
+
+            background-color: aliceblue;
+            
+            padding:20px;
+            border:2px solid black;
+            border-radius:5%;
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+        .ranking section{
+            text-align: center;
+        }
+
+        .conclusion{
+
+            background-color: aliceblue;
+            
+            padding:20px;
+            border:2px solid black;
+            border-radius:5%;
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#intro">Introduction</a><a href="#evo">Evolution</a><a href="#comp">Comparison</a><a href="#rank">Ranking</a><a href="#conc">Conclusion</a>
+    </nav>
+    <header>
+        <h1>RISE OF MANGA AND ANIME</h1>
+        <p>Name-Tejas Kumar | Branch-CSAI | Roll No.-LCI2026011</p>
+    </header>
+    <div class="Introduction" id="intro">
+        <section>
+            
+            <h2>Introduction to Japanese Animation and Comics</h2>
+            <p>Japanese animation (anime) and comic books (manga) have grown from local artistic traditions in Japan into a massive global cultural phenomenon. What once existed as a niche subculture among international audiences has exploded into mainstream entertainment enjoyed by millions worldwide. The seamless integration of intricate storytelling, distinct visual aesthetics, and diverse genres has established anime and manga as major drivers of modern pop culture and global media consumption.
+            </p>
+            <h3>Key Pillars of Japanese Pop Culture</h3>
+            <p>To understand how anime and manga conquered global audiences, it is essential to examine the core elements that define this industry:</p>
+            <ul>
+                <li><strong>Manga Publishing:</strong> Print and digital serializations that serve as the foundational story source for most animated adaptations.</li>
+                <li><strong>Anime Production:</strong> TV series, original video animations (OVAs), and theatrical movies produced by renowned animation studios.</li>
+                <li><strong>Global Streaming & Licensing:</strong> Digital platforms that localized content through subtitles and dubbing, making shows accessible worldwide.</li>
+                <li><strong>Fan Communities & Conventions:</strong> International cosplay events, fan conventions, and online forums that sustain active global fandoms.</li>
+            </ul>
+        </section>
+        <aside><img src="images/mha.jpeg" alt="My Hero Academia Manga Vol. 1 Cover" >
+        <figcaption class="caption">My Hero Acdemia by Kohei Horikoshi</figcaption></aside>
+    </div>
+    <div class="evolution" id="evo">
+        <aside>
+            <img src="images/ash.jpeg" alt="Ash from Pokemon anime">
+            <figcaption class="caption">Ash Ketchum from Pokemon anime</figcaption>
+        </aside>
+        <section>
+            <h2>Evolution of the Global Expansion</h2>
+            <h3>From Niche Broadcasts to Worldwide Streaming</h3>
+            <p>The journey of anime and manga crossing international borders occurred in distinct phases over the decades. Below is a breakdown of how Japanese media expanded across the globe:</p>
+            <ol>
+                <li><strong>Early Import Era (1960s–1980s):</strong> Initial exposure through localized broadcasts of series like Astro Boy, Speed Racer, and Voltron.</li>
+                <li><strong>The Golden Broadcast Era (1990s–2000s):</strong> Cable television networks introduced block programming like Toonami, bringing shows like Dragon Ball Z, Sailor Moon, and Naruto to mainstream youth audiences.</li>
+                <li><strong>Manga Localization Boom (2000s):</strong> Publishers like Viz Media and TokyoPop brought translated manga volumes into major Western bookstores and libraries.</li>
+                <li><strong>The On-Demand Streaming Era (2010s–Present):</strong>Global streaming services made seasonal anime simulcasts available globally within hours of their Japanese TV broadcasts.</li>
+            </ol>
+        </section>
+    
+    </div>
+    <div class="comparision" id="comp">
+        <aside>
+            <img src="images/jjk.jpeg" alt="JJK First Volume Cover">
+            <figcaption class="caption">Jujutsu Kaisen by Gege Akutami</figcaption>
+        </aside>
+        <section><h2>MANGA V/S WESTERN COMICS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Manga</th>
+                    <th>Western Comics</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Color Format</td>
+                    <td>Traditionally Black & White</td>
+                    <td>Full Color</td>
+                </tr>
+                <tr>
+                    <td>Reading Direction</td>
+                    <td>Right to Left</td>
+                    <td>Left to Right</td>
+                </tr>
+                <tr>
+                    <td>Primary Creator Model</td>
+                    <td>Solo Author (Mangaka) with assistants</td>
+                    <td>Team-based (Writer, Artist, Inker, Colorist)</td>
+                </tr>
+                <tr>
+                    <td>Story Structure</td>
+                    <td>Definite beginning, middle, and end</td>
+                    <td>Infinite continuity, reboots, and multiverse storylines</td>
+                </tr>
+                <tr>
+                    <td>Main Genres</td>
+                    <td>Wide variety (Slice-of-life, Horror, Sports, Isekai)</td>
+                    <td>Dominantly Superheroes, Sci-Fi, and Fantasy</td>
+                </tr>
+            </tbody>
+        </table></section>
+        <aside>
+            <img src="images/spidey.jpeg" alt="Spiderman First Issue">
+            <figcaption class="caption">Spiderman First Issue</figcaption>
+        </aside>
+    </div>
+    <div class="ranking" id="rank">
+        <section>
+            <h2>MOST SOLD COMICS OF ALL TIME</h2>
+            <p>Reference: <a href="https://en.wikipedia.org/wiki/List_of_best-selling_comic_series">Wikipedia</a></p>
+        </section>
+        <aside>
+            <img src="images/onepiece.jpeg" alt="One Piece Manga">
+            <figcaption class="caption">
+                <p><strong>One Piece</strong></p>
+                <p><strong>Sales:600 Million</strong></p>
+            </figcaption>
+        </aside>
+        <aside>
+            <img src="images/superman.jpg" alt="Superman Comic">
+            <figcaption class="caption">
+                <p><strong>Superman</strong></p>
+                <p><strong>Sales:600 Million</strong></p>
+            </figcaption>
+        </aside>
+        <aside>
+            <img src="images/Batman.jpeg" alt="Batman Comic">
+            <figcaption class="caption">
+                <p><strong>Batman</strong></p>
+                <p><strong>Sales:484 Million</strong></p>
+            </figcaption>
+        </aside>
+        <aside>
+            <img src="images/spider.jpeg" alt="Spiderman Comic">
+            <figcaption class="caption">
+                <p><strong>Spiderman</strong></p>
+                <p><strong>Sales:387 Million</strong></p>
+            </figcaption>
+        </aside>
+    </div>
+    <div class="conclusion" id="conc">
+        <section>
+        <h2>Conclusion</h2>
+        <p>The global expansion of anime and manga demonstrates how powerful, universal storytelling can transcend geographical and cultural barriers. While Western comics continue to thrive through cinematic universes, manga's unique creator-driven format, black-and-white artistic style, and diverse genres have allowed it to capture a massive share of the international reading audience. As streaming technology and global artistic collaborations continue to advance, the influence of Japanese pop culture alongside Western graphic storytelling will only continue to grow.</p>
+        </section>
+        <img style="border-radius:50%" src="images/jolly.png" alt="Strawhat Jolly roger" id="jolly">
+    </div>
+</body>
+</html>
