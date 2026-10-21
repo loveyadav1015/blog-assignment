@@ -1,0 +1,53 @@
+header{
+    text-align: center;
+    background-color: beige; 
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    
+}
+nav div{
+    flex:1;
+    text-align: center;
+}
+
+nav div:visited{
+    background-color:#EAE8BA ;
+    
+}
+
+.nav1{
+    width: 60px;
+    
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EAE8BA;
+}
+span{
+    padding: 20px 20px 0px 20px;
+    background-color: ;
+}
+.image1{
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.image1 > div{
+    flex: 1;
+    margin-left :20px;
+}
+
+.actual img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+ul{
+    font-size: larger;
+}
