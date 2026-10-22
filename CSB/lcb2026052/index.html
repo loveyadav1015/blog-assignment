@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Code: Why Open Source Built the Modern Internet</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333; max-width: 800px; margin: 40px auto; padding: 0 20px;">
+
+<article>
+
+    <!-- Student Details (Subtle and non-intrusive) -->
+    <div style="font-size: 13px; color: #666666; margin-bottom: 12px; border-bottom: 1px solid #eeeeee; padding-bottom: 8px;">
+        Name : Harshit Mishra &nbsp;|&nbsp; Enrollment No : LCB2026052
+    </div>
+
+    <h1 style="color: #111111; font-size: 28px; margin-bottom: 20px;">Beyond the Code: Why Open Source Built the Modern Internet (and How It Almost Fell Apart)</h1>
+
+    <div style="background-color: #eef6ff; border-left: 4px solid #0066cc; padding: 12px 16px; margin-bottom: 24px;">
+        <p style="margin: 0; font-size: 15px;">🎥 <strong>Inspired by:</strong> This article is based on the investigative video by Veritasium: <a href="https://www.youtube.com/watch?v=aoag03mSuXQ" target="_blank" rel="noopener noreferrer" style="color: #0066cc; font-weight: bold;">"The Internet Was Weeks Away From Disaster And No One Knew"</a>.</p>
+    </div>
+
+    <p>A while back , I watched this youtube video of a channel named Veritasium which intrigued my interest in Open Source and how it actually lead to the developments in the internet and software as we know today. So , I have written ( or used AI to write ) this blog inspired from that video.</p>
+    <h2 style="color: #222222; font-size: 22px; border-bottom: 1px solid #cccccc; padding-bottom: 6px; margin-top: 32px;">How a Printer Jam Sparked a Revolution</h2>
+
+    <p>To understand why open source matters, we have to look back at how it all started. In the late 1960s, operating systems like Unix were shared freely among researchers. But by the 1980s, corporate America started slamming the doors shut, forcing programmers to sign strict Non-Disclosure Agreements (NDAs).</p>
+
+    <p>A researcher named Richard Stallman found this corporate lockdown jarring after a jammed lab printer left him unable to access source code. Refusing to spend his career building walls between people, Stallman quit MIT and launched the GNU project, championing four core freedoms: the freedom to run, study, change, and share software. The missing puzzle piece arrived in 1991, when a Finnish student named Linus Torvalds built an open kernel called Linux.</p>
+
+    <p>Combined, GNU and Linux created a revolutionary model. Instead of reinventing the wheel, developers worldwide could inspect code, fix flaws collaboratively, and build on top of trusted foundations. Today, Linux powers everything from Android’s three billion devices and the world's top 500 supercomputers to the servers running the Pentagon and global banking systems.</p>
+
+    <h2 style="color: #222222; font-size: 22px; border-bottom: 1px solid #cccccc; padding-bottom: 6px; margin-top: 32px;">The Danger of Invisible Labor</h2>
+
+    <p>Because open-source projects are free, they often operate on a shoestring budget. Many critical utilities are maintained by a single, unpaid volunteer working late nights on weekends out of pure passion.</p>
+
+    <p>This vulnerability was masterfully exploited in a multi-year social engineering plot. A mysterious actor known as Jia Tan spent years building trust with Lassa Colin, the burnt-out sole maintainer of <strong>XZ Utils</strong>—a ubiquitous data compression tool. Once Jia gained maintainer privileges, he slipped a deeply hidden, master-key backdoor into the code, aiming right for OpenSSH, the secure remote-login tool that serves as the master key to internet servers everywhere. If deployed fully, it could have given attackers undetected root access to millions of servers worldwide.</p>
+
+    <h2 style="color: #222222; font-size: 22px; border-bottom: 1px solid #cccccc; padding-bottom: 6px; margin-top: 32px;">The Accidental Hero: Andres Freund’s Deep Dive</h2>
+
+    <p>How was this multi-year, state-sponsored cyber weapon caught? Not by an elite government intelligence agency, but by sheer human curiosity.</p>
+
+    <p>In March 2024, a German programmer named Andres Freund—who wasn't even a security researcher, but an engineer at Microsoft working on Postgres—was testing an unstable version of Debian just to make sure his database software ran smoothly. During his tests, he noticed a tiny, frustrating anomaly: connection times were lagging by a mere 400 to 500 milliseconds.</p>
+
+    <p>Most people would have shrugged off a half-second delay as typical software flakiness. But Andres couldn't shake it. Remembering earlier memory leaks associated with XZ, he decided to pull the thread.</p>
+
+    <p>As he dug deeper, he realized this wasn’t a standard bug. It was a meticulously crafted masterpiece of malicious engineering. The backdoor hunted through memory for audit hooks, used custom decoders to read raw bytes, and wrapped itself in heavy encryption so it would only trigger for a specific secret key. Its extreme caution and obfuscation were what ultimately betrayed it, as the added complexity caused those slight connection delays. Andres immediately sounded the alarm, pulling the emergency brake on a global disaster just weeks before enterprise Linux distributions like Red Hat could roll it out.</p>
+
+    <h2 style="color: #222222; font-size: 22px; border-bottom: 1px solid #cccccc; padding-bottom: 6px; margin-top: 32px;">Why Open Source Still Wins</h2>
+
+    <p>The XZ incident terrified the tech world, leading many to question whether open-source software is fundamentally unsafe. But the reality is quite the opposite.</p>
+
+    <p>Closed-source software hides behind corporate NDAs and legal red tape, meaning vulnerabilities can sit silently for years without anyone ever knowing. Open source, by contrast, invites scrutiny. Because Andres Freund had access to the code, he could investigate a minor lag, rip open the layers of deception, and expose the threat in broad daylight.</p>
+
+    <p>Open source is one of humanity’s greatest collaborative achievements, but it requires care. We can no longer treat it as free infinite labor. Protecting the code means supporting the people behind it—because the invisible foundation of our digital world deserves far more than a shoestring budget and a burnt-out volunteer.</p>
+
+</article>
+
+</body>
+</html>
