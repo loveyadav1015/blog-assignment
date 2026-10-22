@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the Internet Works</title>
+</head>
+<body>
+    <header>
+        <h1>How the Internet Works</h1>
+        <p>A beginner's guide to the digital world</p>
+        <p>Name: Kanani Jenil Jigneshbhai | Roll Number: LCI2026024 | Branch: CSAI</p>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>The internet is one of the most important inventions of the modern world. It allows people to communicate, learn, work, shop and share information across long distances. We use it every day through phones, computers and other connected devices. However, many people do not know what happens when they open a website or send a message. The internet is a global network of connected computers and servers that exchange information using agreed communication rules. Understanding its basic working helps us use technology more effectively and responsibly.</p>
+        </section>
+
+        <section>
+            <h2>How Does the Internet Work?</h2>
+            <p>When you enter a website address in your browser, your device contacts a Domain Name System (DNS) server to find the corresponding IP address. Your browser then sends a request to the website's server. The server processes the request and sends the required information back to your device. Your browser uses HTML and other web technologies to display the page. Information is divided into small units called packets, which travel through networks and are reassembled at the destination.</p>
+            <p>Routers help direct data between networks, while internet service providers connect homes and organisations to the wider internet. Different routes may be used to deliver packets, depending on network conditions.</p>
+        </section>
+
+        <section id="important-parts">
+            <h2>Important Parts of the Internet</h2>
+            <ol>
+                <li><strong>Client:</strong> A device or application that requests information.</li>
+                <li><strong>Server:</strong> A computer that stores or provides websites and services.</li>
+                <li><strong>Router:</strong> A device that forwards data between networks.</li>
+                <li><strong>DNS:</strong> A system that translates domain names into IP addresses.</li>
+            </ol>
+            <h3>Common Uses</h3>
+            <ul>
+                <li>Online education and research</li>
+                <li>Communication through email and messaging</li>
+                <li>Entertainment, music and videos</li>
+                <li>Online shopping and digital payments</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Internet Communication at a Glance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Browser</td>
+                        <td>Requests and displays web pages</td>
+                    </tr>
+                    <tr>
+                        <td>DNS</td>
+                        <td>Finds the IP address for a domain</td>
+                    </tr>
+                    <tr>
+                        <td>Server</td>
+                        <td>Responds to requests with data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Explore More</h2>
+            <p>Read about the internet on <a href="https://www.cloudflare.com/learning/network-layer/what-is-the-internet/">Cloudflare's internet guide</a>.</p>
+            <p>Jump back to the <a href="#introduction">introduction</a>.</p>
+            <p>Learn about <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML on MDN</a>, a language used to structure web pages.</p>
+        </section>
+
+        <section>
+            <h2>Illustrations</h2>
+            <p>The following diagrams illustrate internet communication.</p>
+            <img src="https://www.istockphoto.com/photo/5g-communications-tower-with-man-using-mobile-phone-gm1225585631-360791585?utm_source=pixabay&utm_medium=affiliate&utm_campaign=sponsored_image&utm_content=srp_topbanner_media&utm_term=internet+network" alt="Illustration of devices connected through the internet" width="300">
+            <img src="https://pixabay.com/images/download/x-9088888_1920.jpg" alt="Illustration representing a web server responding to a request" width="300">
+            <p>Add your own image files named internet.png and server.png to the images folder. Keep each image under 1 MB.</p>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>The internet connects devices and people through a system of networks, servers, routers and communication protocols. DNS helps browsers locate websites, while packets carry information between devices. These processes happen in seconds, making online communication feel simple. Learning how the internet works also encourages us to think about privacy, security and responsible use. As technology continues to develop, understanding these fundamentals will remain useful for students and anyone who uses digital services.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Author: Kanani Jenil J. | Roll Number: LCI2026024 | Branch: CSAI</p>
+        <p>Blog assignment created using HTML only.</p>
+    </footer>
+</body>
+</html>
