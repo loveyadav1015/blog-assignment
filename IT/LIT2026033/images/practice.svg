@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img" aria-labelledby="title desc">
+  <title id="title">Hands over piano keys</title><desc id="desc">A simple illustration of two hands above a keyboard.</desc>
+  <rect width="480" height="260" rx="18" fill="#f6efe7"/>
+  <rect x="60" y="157" width="360" height="70" rx="5" fill="#fff" stroke="#4d5962" stroke-width="4"/>
+  <g stroke="#4d5962" stroke-width="3"><path d="M105 159v66M150 159v66M195 159v66M240 159v66M285 159v66M330 159v66M375 159v66"/></g>
+  <g fill="#34434c"><path d="M94 159h24v37H94zM139 159h24v37h-24zM229 159h24v37h-24zM274 159h24v37h-24zM319 159h24v37h-24z"/></g>
+  <path d="M117 145c-24-17-35-40-25-53 8-10 18 3 25 13-4-22 1-36 12-36 12 0 12 19 12 34 4-17 13-26 22-21 12 6 3 26 0 38 11-13 23-17 30-8 8 11-8 33-25 45H122z" fill="#e6ac89" stroke="#9d7058" stroke-width="3"/>
+  <path d="M363 145c24-17 35-40 25-53-8-10-18 3-25 13 4-22-1-36-12-36-12 0-12 19-12 34-4-17-13-26-22-21-12 6-3 26 0 38-11-13-23-17-30-8-8 11 8 33 25 45h46z" fill="#e6ac89" stroke="#9d7058" stroke-width="3"/>
+</svg>
