@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img" aria-labelledby="title desc">
+  <title id="title">Keyboard and music</title><desc id="desc">A small keyboard with musical notes above its keys.</desc>
+  <rect width="480" height="260" rx="18" fill="#eef5fa"/>
+  <g fill="#526d82"><path d="M136 62v40h-8V62a10 10 0 1 1 16 8l-5-6a4 4 0 1 0-3-2Z"/><path d="M174 48v54h-8V48a10 10 0 1 1 16 8l-5-6a4 4 0 1 0-3-2Z"/></g>
+  <path d="M105 153h270v72H105z" fill="#fff" stroke="#324858" stroke-width="4" rx="7"/>
+  <g stroke="#324858" stroke-width="3"><path d="M144 154v70M183 154v70M222 154v70M261 154v70M300 154v70M339 154v70"/></g>
+  <g fill="#263846"><path d="M133 154h22v38h-22zM172 154h22v38h-22zM250 154h22v38h-22zM289 154h22v38h-22zM328 154h22v38h-22z"/></g>
+</svg>
